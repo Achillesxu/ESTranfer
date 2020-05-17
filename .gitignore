@@ -1,0 +1,8 @@
+!config
+dist
+log
+.idea
+ESTransfer
+ESTransfer.exe
+tmp
+vendor

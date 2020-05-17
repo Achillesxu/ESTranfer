@@ -1,0 +1,8 @@
+[general]
+stdout-logfile="estransfer.out"
+
+[src]
+
+
+
+[dst]
