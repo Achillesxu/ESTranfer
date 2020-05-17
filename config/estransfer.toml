@@ -1,8 +1,32 @@
 [general]
-stdout-logfile="estransfer.out"
+stdout-logfile = "estransfer.out"
+pidfile="estransfer.pid"
+
+[logging]
+filename="logs/estransfer.log"
+level="info"
+maxsize=100
+maxbackups=30
+maxage=10
+use-localtime=true
+use-compression=true
 
 [src]
-
-
+es-cluster = [
+    "192.168.250.217:9200",
+    "192.168.250.218:9200",
+    "192.168.250.219:9200"
+]
+index-list = [
+    "nuo-sms-gateway-send-record-2020.01"
+]
 
 [dst]
+es-cluster = [
+    "192.168.250.217:9200",
+    "192.168.250.218:9200",
+    "192.168.250.219:9200"
+]
+index-list = [
+    "nuo-sms-send-record-2020.01"
+]
