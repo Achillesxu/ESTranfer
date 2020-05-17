@@ -70,5 +70,5 @@ func main() {
 	signal.Notify(exitChannel, syscall.SIGINT, syscall.SIGQUIT, syscall.SIGTERM)
 
 	// This triggers handleExit (after other defers), which will then call os.Exit properly
-	panic(exitCode{core.Start(exitChannel)})
+	panic(exitCode{core.Start(nil, exitChannel)})
 }
